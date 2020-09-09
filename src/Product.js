@@ -1,10 +1,23 @@
 import React from 'react';
 import './Product.css';
+import StarRateRoundedIcon from '@material-ui/icons/StarRateRounded';
 
-function Product() {
+function Product({ title, image, price, rating }) {
     return (
         <div className="product">
-            
+            <div className="product__info">
+                <p>{title}</p>
+                <p className="product__price">
+                    <strong>&#8377; {price}</strong>
+                </p>
+                <div className="product__rating">
+                    {Array(rating).fill().map((_, i) => (
+                        <p><StarRateRoundedIcon /></p>
+                    ))}
+                </div>
+            </div>
+            <img src={image} alt="Book" />
+            <button>Add to Cart</button>
         </div>
     )
 }
