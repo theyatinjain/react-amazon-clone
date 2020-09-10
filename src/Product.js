@@ -5,10 +5,8 @@ import { useStateValue } from './StateProvider';
 
 function Product({ id, title, image, price, rating }) {
     const [{ cart }, dispatch] = useStateValue();
-    
-    console.log(cart)
 
-    const addToBasket = () => {
+    const addToCart = () => {
         //dispatch the item into data layer
         dispatch({
             type: 'ADD_TO_CART',
@@ -35,7 +33,7 @@ function Product({ id, title, image, price, rating }) {
                 </div>
             </div>
             <img src={image} alt="Book" />
-            <button onClick={addToBasket}>Add to Cart</button>
+            <button onClick={addToCart}>Add to Cart</button>
         </div>
     )
 }

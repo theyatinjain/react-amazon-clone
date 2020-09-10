@@ -1,18 +1,48 @@
 .checkout {
     display: flex;
-    /* flex-direction: column; */
-    padding: 12px;
+    flex-direction: column;
+    /* padding: 12px; */
     background-color: #fff;
     height: max-content;
 }
+
+.checkout__area {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
 .checkout__ad {
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
+.checkout__left {
+    width: 100%;
+}
+
+.checkout__right {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
 .checkout__title {
     margin-right: 10px;
     padding: 10px;
     border-bottom: 1px solid #d3d3d3;
+}
+
+.checkout__recommended {
+    margin-top: 10px;
+    padding: 10px 0 0 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+}
+
+.checkout__recommendedTitle {
+    font-size: 16px;
 }

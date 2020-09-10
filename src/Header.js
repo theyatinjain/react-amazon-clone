@@ -26,7 +26,7 @@ function Header() {
                 <Link to={!user && '/login'}>
                     <div onClick={handleAuthentication } className="header__option">
                         <span className="header__optionLineOne">
-                            Hello, {(user?.email)?.split('@')[0]}
+                            Hello, {user? (user?.email)?.split('@')[0]:'Guest'}
                     </span>
                         <span className="header__optionLineTwo">
                             {user? 'Sign Out':'Sign In'}
@@ -50,9 +50,9 @@ function Header() {
                     </span>
                 </div>
                 <Link to="/checkout">
-                    <div className="header__optionBasket">
+                    <div className="header__optionCart">
                         <ShoppingCartIcon />
-                        <span className="header__optionLineTwo header__basketCount">
+                        <span className="header__optionLineTwo header__cartCount">
                             {cart?.length}
                         </span>
                     </div>

@@ -1,0 +1,40 @@
+.recommendedProduct {
+    display: flex;
+    margin-top: 10px;
+}
+
+.recommendedProduct > img {
+    object-fit: contain;
+    height: 100px;
+    width: auto;
+    margin: 10px 20px 10px 0;
+}
+
+.recommendedProduct__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.recommendedProduct__title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.recommendedProduct__price {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.recommendedProduct__info > button {
+    background-color: #f7ca00;
+    padding: 3px 10px;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #111111; 
+}
