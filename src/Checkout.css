@@ -1,6 +1,7 @@
 .checkout {
     display: flex;
-    padding: 20px;
+    /* flex-direction: column; */
+    padding: 12px;
     background-color: #fff;
     height: max-content;
 }

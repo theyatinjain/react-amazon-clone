@@ -5,6 +5,7 @@
   /* height: 100px; */
   width: 300px;
   padding: 20px;
+  margin-left: 12px;
   background-color: #f3f3f3;
   border: 1px solid #dddddd;
   border-radius: 5px;
@@ -13,7 +14,12 @@
 .subtotal__gift {
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 8px;
+    /* font-size: 12px; */
+}
+
+.subtotal__gift > input {
+  margin-right: 5px;
 }
 
 .subtotal > button {
@@ -23,7 +29,7 @@
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
     border-radius: 3px;
-    margin-top: 15px;
+    margin-top: 36px;
     color: #111111; 
 }
 
