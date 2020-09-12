@@ -33,6 +33,7 @@ function Header() {
                     </span>
                     </div>
                 </Link>
+                <Link to="/orders">
                 <div className="header__option">
                     <span className="header__optionLineOne">
                         Returns
@@ -41,6 +42,7 @@ function Header() {
                         & Orders
                     </span>
                 </div>
+                </Link>
                 <div className="header__option">
                     <span className="header__optionLineOne">
                         Your

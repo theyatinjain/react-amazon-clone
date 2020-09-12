@@ -108,9 +108,9 @@ function Payment() {
                 <CurrencyFormat
                   renderText={(value) => (
                     <>
-                      <p>
+                      <h3>
                         Order Total: <strong>{value}</strong>
-                      </p>
+                      </h3>
                     </>
                   )}
                   decimalScale={2}
@@ -119,12 +119,12 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"₹"}
                 />
+                <CardElement onChange={handleChange} />
+                <button disabled={processing || disabled || succeeded}>
+                  <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                </button>
+                {error && <div>{error}</div>}
               </div>
-              <CardElement onChange={handleChange} />
-              <button disabled={processing || disabled || succeeded}>
-                <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
-              </button>
-              {error && <div>{error}</div>}
             </form>
           </div>
         </div>

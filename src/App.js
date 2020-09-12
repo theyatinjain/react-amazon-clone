@@ -16,11 +16,11 @@ const promise = loadStripe('pk_test_51HQ7gYIev2qb1TQCLjPfD55PadCaXcyJoAXm2fxu3mU
 
 function App() {
 
-  const [{ }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
-      console.log('user >>>>>>>>>', authUser);
+      // console.log('user >>>>>>>>>', authUser);
       if (authUser) {
         dispatch({
           type: 'SET_USER',
@@ -43,6 +43,7 @@ function App() {
             <Login />
           </Route>
           <Route path="/orders">
+            <Header />
             <Orders />
           </Route>
           <Route path="/checkout">
