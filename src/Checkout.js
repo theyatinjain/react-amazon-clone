@@ -17,28 +17,27 @@ function Checkout() {
       />
       <div className="checkout__area">
         <div className="checkout__left">
-          <div>
-            <h2 className="checkout__title">
-              {`Hello ${
-                user ? user?.email?.split("@")[0] : "Guest"
-                }, Your Shopping Cart`}
+          <div className="checkout__title">
+            <h2>
+              {`Hello ${user ? user?.email?.split("@")[0] : "Guest"
+                }, Your Shopping Cart ${(cart?.length)? '':' is empty'}`}
             </h2>
-            {cart.map((item) => (
-              <CheckoutProduct
-                id={item.id}
-                title={item.title}
-                price={item.price}
-                image={item.image}
-                rating={item.rating}
-              />
-            ))}
           </div>
+          {cart.map((item) => (
+            <CheckoutProduct
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              image={item.image}
+              rating={item.rating}
+            />
+          ))}
         </div>
         <div className="checkout__right">
           <Subtotal />
           <div className="checkout__recommended">
             <h2 className="checkout__recommendedTitle">
-              Additional items to consider
+              More items to consider
             </h2>
             <RecommendedProduct
               id={456}
